@@ -94,7 +94,7 @@ p {
 }
 
 .fa-edit {
-  color: blue;
+  color: #0000ffe5;
   position: absolute;
   margin-left: 70%;
   cursor: pointer;
