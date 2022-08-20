@@ -1,16 +1,21 @@
-/* eslint-disable max-classes-per-file */
-
-import addTodo from './modules/AddTodo.js';
-import displayTodos from './modules/DisplayTodo.js';
-import { textField } from './modules/GetElements.js';
+import AddList from './modules/AddTodo.js';
+import ClearCompletedTasks from './modules/clearcompleted.js';
+import ShowList from './modules/DisplayTodo.js';
+import { textBox, clearCompletedTasks } from './modules/GetElements.js';
 import './style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  textField.addEventListener('keydown', (e) => {
+  textBox.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
-      addTodo();
-      textField.value = '';
+      const listAdd = new AddList();
+      listAdd.addList();
     }
   });
-  displayTodos();
+  clearCompletedTasks.addEventListener('click', () => {
+    const clearAllCompleted = new ClearCompletedTasks();
+    clearAllCompleted.clearCompletedTasks();
+  });
+
+  const listShow = new ShowList();
+  listShow.showList();
 });

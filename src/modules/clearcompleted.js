@@ -1,15 +1,20 @@
+/* eslint-disable no-plusplus */
 import { data } from './GetElements.js';
-// eslint-disable-next-line import/no-cycle
 import ShowList from './DisplayTodo.js';
 
-class RemoveList {
-  removeList = (id) => {
+class ClearCompletedTasks {
+  clearCompletedTasks = () => {
     let listArr = [];
-    let str = '';
+    const str = '';
     const listShow = new ShowList();
     const listArrStr = localStorage.getItem('list');
     listArr = JSON.parse(listArrStr);
-    listArr.splice(id, 1);
+
+    for (let length = listArr.length - 1; length >= 0; length--) {
+      if (listArr[length].completed === true) {
+        listArr.splice(length, 1);
+      }
+    }
 
     // Updated index
     const updateData = listArr.filter((updatedIndex, index) => {
@@ -20,10 +25,9 @@ class RemoveList {
     });
 
     localStorage.setItem('list', JSON.stringify(updateData));
-    str = '';
     data.innerHTML = str;
     listShow.showList();
   };
 }
 
-export default RemoveList;
+export default ClearCompletedTasks;
