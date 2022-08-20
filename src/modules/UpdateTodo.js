@@ -1,25 +1,29 @@
+import { data } from './GetElements.js';
 // eslint-disable-next-line import/no-cycle
-import displayTodos from './DisplayTodo.js';
-import { todoData } from './GetElements.js';
+import ShowList from './DisplayTodo.js';
 
-const updateTodo = (index, description) => {
-  let todos = [];
-  const content = '';
+class UpdateList {
+  updateList = (index, description) => {
+    let listArr = [];
+    let str = '';
+    const listShow = new ShowList();
 
-  const todosStr = localStorage.getItem('todos');
-  todos = JSON.parse(todosStr);
+    const listArrStr = localStorage.getItem('list');
+    listArr = JSON.parse(listArrStr);
 
-  const updateTodo = todos.filter((item) => {
-    if (item.index === index) {
-      item.description = description;
-    }
-    return item;
-  });
+    const updateTask = listArr.filter((item) => {
+      if (item.index === index) {
+        item.description = description;
+      }
+      return item;
+    });
 
-  localStorage.setItem('todos', JSON.stringify(updateTodo));
+    localStorage.setItem('list', JSON.stringify(updateTask));
 
-  todoData.innerHTML = content;
-  displayTodos();
-};
+    str = '';
+    data.innerHTML = str;
+    listShow.showList();
+  };
+}
 
-export default updateTodo;
+export default UpdateList;

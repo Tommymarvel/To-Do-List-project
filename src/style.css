@@ -1,101 +1,158 @@
 body {
-  background-color: gainsboro;
+  background-image: url(./img/jess-bailey-H7LEJZnrhSU-unsplash.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.table {
-  background-color: #fff;
-}
-
-.header {
-  display: flex;
-  border: 1px gainsboro solid;
-  justify-content: space-between;
-  height: 40px;
-  font-size: 1rem;
-  font-weight: 600;
-  padding-bottom: 2%;
-}
-
-.refresh {
-  cursor: pointer;
-  height: 18px;
-  transition: all 0.2s;
-}
-
-.refresh.active {
-  transform: rotate(180deg);
-}
-
-.add-text {
-  display: flex;
-  justify-content: space-between;
-  border: 2px gainsboro solid;
-  height: 40px;
-}
-
-section {
+.data-container {
   display: flex;
   flex-direction: column;
-  margin: 10% 10% 0 10%;
-  box-shadow: 10px 10px 10px gainsboro;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto;
 }
 
-footer {
-  background-color: rgba(201, 192, 192, 0.932);
-  margin: 0 10% 0 10%;
-  padding-top: 5px;
-  height: 40px;
-  border: 2px gainsboro solid;
+.data {
+  background-color: gainsboro;
+  width: 500px;
+  border-radius: 5px;
 }
 
-.fa {
-  padding: 10px;
+.inner-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+  padding: 0 10px 0 10px;
 }
 
-.clear-completed {
-  text-align: center;
-  margin: 1% 0 1% 0;
-  color: gray;
-}
-
-.clear-completed:hover {
-  background-color: aliceblue;
-}
-
-.the-elements {
-  display: grid;
-  grid-template-columns: 1fr 30fr;
-  background-color: white;
-  margin-top: 6px;
-  height: 50px;
+.textbox-container {
+  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-p {
-  padding: 0 10px;
+.textbox-container i {
+  margin-left: 468px;
+  position: absolute;
+  color: gray;
+  font-size: 30px;
 }
 
-.text-field {
+.text-input {
+  outline-style: none;
   border: none;
-  width: 100%;
-}
-
-.edit-field {
-  border: none;
+  background-color: gainsboro;
+  border-bottom: 1px solid gray;
   width: 500px;
-  outline: none;
+  padding: 10px;
+  font-size: 30px;
 }
 
-.fa-trash {
+input[type="checkbox"] {
+  display: none;
+}
+
+.description {
+  font-size: 23px;
+  position: relative;
+  margin-left: 30px;
+}
+
+.description:hover {
+  cursor: pointer;
+}
+
+.description::before {
+  content: "";
+  background-image: url("./img/check-circle.svg");
+  background-position: center;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -35px;
+  top: -5px;
+  transform: scale(0) rotateZ(180deg);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+
+input[type="checkbox"]:checked + .description::before {
+  transform: scale(1) rotateZ(0deg);
+}
+
+.description::after {
+  content: "";
+  border: 2px solid #27ae60;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -33px;
+  top: -3px;
+  border-radius: 50%;
+}
+
+.fa-ellipsis-v {
+  font-size: 20px;
+}
+
+.fa-trash-alt {
+  display: none;
   color: red;
-  margin-left: 70%;
-  position: absolute;
+  font-size: 20px;
+}
+
+.fa-trash-alt:hover {
   cursor: pointer;
 }
 
-.fa-edit {
-  color: blue;
-  position: absolute;
-  margin-left: 70%;
+.fa-ellipsis-v:hover {
   cursor: pointer;
+}
+
+.update-field {
+  outline-style: none;
+  border: none;
+  background-color: aliceblue;
+  font-size: 20px;
+}
+
+.not-found {
+  color: black;
+  font-size: 30px;
+  padding-left: 135px;
+}
+
+.clear-completed-task {
+  background-color: beige;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.clear-completed-task:hover {
+  background-color: rgb(168, 213, 252);
+  cursor: pointer;
+}
+
+.error-message {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  width: 200px;
+  border-radius: 20px;
+  margin-top: 10px;
+  color: white;
+  margin-left: 43%;
+}
+
+.show-message {
+  display: flex;
 }
