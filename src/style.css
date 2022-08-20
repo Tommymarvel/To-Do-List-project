@@ -67,13 +67,15 @@ footer {
   grid-template-columns: 1fr 30fr;
   background-color: white;
   margin-top: 6px;
+  height: 50px;
+  align-items: center;
 }
 
 p {
   padding: 0 10px;
 }
 
-input {
+.text-field {
   border: none;
   width: 100%;
 }
@@ -92,7 +94,7 @@ input {
 }
 
 .fa-edit {
-  color: #0000ffe5;
+  color: blue;
   position: absolute;
   margin-left: 70%;
   cursor: pointer;
