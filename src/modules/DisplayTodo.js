@@ -63,7 +63,7 @@ class ShowList {
       });
 
       // Update completed tasks list
-      checkbox.addEventListener('click', () => {
+      checkbox.addEventListener('change', () => {
         completedTask.completedList(checkbox, label, listArr, index);
       });
 
