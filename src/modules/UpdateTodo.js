@@ -1,11 +1,12 @@
-import displayTodos from "./DisplayTodo";
-import { todoData } from "./GetElements";
+// eslint-disable-next-line import/no-cycle
+import displayTodos from './DisplayTodo.js';
+import { todoData } from './GetElements.js';
 
 const updateTodo = (index, description) => {
   let todos = [];
-  const content = "";
+  const content = '';
 
-  const todosStr = localStorage.getItem("todos");
+  const todosStr = localStorage.getItem('todos');
   todos = JSON.parse(todosStr);
 
   const updateTodo = todos.filter((item) => {
@@ -15,7 +16,7 @@ const updateTodo = (index, description) => {
     return item;
   });
 
-  localStorage.setItem("todos", JSON.stringify(updateTodo));
+  localStorage.setItem('todos', JSON.stringify(updateTodo));
 
   todoData.innerHTML = content;
   displayTodos();

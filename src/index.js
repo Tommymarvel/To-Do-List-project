@@ -1,13 +1,15 @@
-import addTodo from "./modules/AddTodo";
-import displayTodos from "./modules/DisplayTodo";
-import { textField } from "./modules/GetElements";
-import "./style.css";
+/* eslint-disable max-classes-per-file */
 
-document.addEventListener("DOMContentLoaded", () => {
-  textField.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
+import addTodo from './modules/AddTodo.js';
+import displayTodos from './modules/DisplayTodo.js';
+import { textField } from './modules/GetElements.js';
+import './style.css';
+
+document.addEventListener('DOMContentLoaded', () => {
+  textField.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
       addTodo();
-      textField.value = "";
+      textField.value = '';
     }
   });
   displayTodos();
