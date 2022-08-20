@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -12,23 +12,26 @@
       referrerpolicy="no-referrer"
     />
     <title>To Do List</title>
-</head>
-<body>
-<section >
-    <div class="header table">
-    <p>Today's To Do </p>
-    <i id="list-refresh-btn" class="refresh fa fa-rotate"></i>
-    </div>
-    <div class="add-text table">
-    <input type="text" placeholder="Add to your list...."  >
-    <i id="todo-add-btn" class="fa fa-arrow-right-to-bracket"></i>
-    </div>
-    <div class="todo-tasks"></div>
-    
-</section>
-<footer>
-        <p class="clear-completed">Clear all completed</p>
+  </head>
+  <body>
+    <section>
+      <div class="header table">
+        <p>Today's To Do</p>
+        <i id="list-refresh-btn" class="refresh fa fa-rotate"></i>
+      </div>
+      <div class="add-text table">
+        <input
+          class="input-list text-field"
+          id="text-field"
+          type="text"
+          placeholder="Add to your list...."
+        />
+        <i id="todo-add-btn" class="fa fa-arrow-right-to-bracket"></i>
+      </div>
+      <div class="todo-tasks" id="todo-data"></div>
+    </section>
+    <footer>
+      <p class="clear-completed">Clear all completed</p>
     </footer>
-</body>
-
+  </body>
 </html>
