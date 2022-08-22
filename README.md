@@ -10,6 +10,9 @@ This is a Todo list App track daily activities using webpack and other web dev t
 - Github, Linters
 - Webpack
 
+## Live Demo (if available)
+
+[Live Demo Link](https://tommymarvel.github.io/To-Do-List-project/)
 
 ## Getting Started
 

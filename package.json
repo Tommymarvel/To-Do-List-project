@@ -4,7 +4,7 @@
   "description": "To-Do List Project using Webpack",
   "private": "true",
   "scripts": {
-    "test": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist",
     "watch": "webpack --watch",
     "start": "webpack server --open",
     "build": "webpack"
