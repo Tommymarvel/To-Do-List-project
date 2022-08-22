@@ -4,7 +4,7 @@
   "description": "To-Do List Project using Webpack",
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gh-pages -d dist",
     "watch": "webpack --watch",
     "start": "webpack server --open",
     "build": "webpack"
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Tommymarvel/To-Do-List-project/tree/main"
   },
-  "homepage": "https://github.com/Tommymarvel/To-Do-List-project/blob/main/README.md",
+  "homepage": "https://Tommymarvel.github.io/To-Do-List-project",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
@@ -39,6 +39,7 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "lodash": "^4.17.21"
   }
 }
